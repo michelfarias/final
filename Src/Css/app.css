@@ -1,0 +1,17 @@
+table {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+header {
+	height:56px;	
+}
+
+footer {
+	margin-top:10px;
+}
+
+.ladoladoleft {
+	float:left;
+	margin:0 0 0 10px;
+}

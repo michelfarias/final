@@ -28,8 +28,20 @@ class PeriodosController
 	public static function save(){
 		$periodo = new Periodo();
 		$periodo->setDescricao($_POST['periodo']);
+		if(isset($_POST['periodo'])){
+			$periodo->setId($_POST['idPeriodo']);
+		}
 		$periodo->saveOuUpdate();
 		header("location:?r=periodos");
 	}
+
+	public static function delete(){
+             if(isset($_POST['idPeriodo'])){
+                 $periodo = new Periodo();
+                 $periodo->setId($_POST['idPeriodo']);
+                 $periodo->remove($this);
+                 header("location:?r=periodos");
+             }
+        }
 }
 ?>

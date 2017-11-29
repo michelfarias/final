@@ -23,9 +23,9 @@
       </div>
 
       <div class='ladoladoleft'>
-        <form action='?r=periodos&f=delete'>
-        <input type='hidden' name='id' value='<?= $periodo->getId(); ?>'>
-        <button type="button" class="btn btn-danger">Excluir</button>
+        <form action='?r=periodos&f=delete' method="POST">
+            <input type='hidden' name='idPeriodo' value='<?= $periodo->getId(); ?>'>
+            <button type="submit" class="btn btn-danger">Excluir</button>
         </form>
       </div>
 
